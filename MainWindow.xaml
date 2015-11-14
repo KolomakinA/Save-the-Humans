@@ -16,6 +16,11 @@
             <RowDefinition/>
             <RowDefinition Height="150"/>
         </Grid.RowDefinitions>
+        <Button x:Name="startButton" Content="Start!" HorizontalAlignment="Left" Margin="33,67,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+        <TextBlock x:Name="textBlock" Grid.Column="2" HorizontalAlignment="Left" Margin="49,67,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="20" Width="55"/>
+        <ProgressBar Grid.Column="1" HorizontalAlignment="Left" Height="10" Margin="59,77,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+        <ContentControl Content="ContentControl" Grid.Column="2" HorizontalAlignment="Left" Margin="37,92,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Canvas Grid.Column="1" HorizontalAlignment="Left" Height="80" Margin="59,39,0,0" VerticalAlignment="Top" Width="80"/>
 
     </Grid>
 </Window>
