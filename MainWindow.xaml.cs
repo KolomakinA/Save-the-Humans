@@ -1,17 +1,17 @@
-﻿using System;
+﻿/*using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Data;
+using System.Windows.Documents;*/
+using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 using System.Windows.Media.Animation;
 
@@ -32,7 +32,7 @@ namespace Save_the_Humans
             enemyTimer.Interval = TimeSpan.FromSeconds(2);
 
             targetTimer.Tick += TargetTimer_Tick;
-            targetTimer.Interval = TimeSpan.FromSeconds(.5);
+            targetTimer.Interval = TimeSpan.FromSeconds(.1);
         }
 
         private void TargetTimer_Tick(object sender, EventArgs e)
@@ -62,7 +62,6 @@ namespace Save_the_Humans
         private void startButton_Click(object sender, RoutedEventArgs e)
         {
             StartGame();
-            //AddEnemy();
         }
 
         private void StartGame()
@@ -120,7 +119,7 @@ namespace Save_the_Humans
             }
         }
 
-        private void human_MouseEnter(object sender, MouseEventArgs e)
+        private void target_MouseEnter(object sender, MouseEventArgs e)
         {
             if (targetTimer.IsEnabled && humanCaptured)
             {

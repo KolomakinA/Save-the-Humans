@@ -9,7 +9,27 @@
     <Window.Resources>
         <ControlTemplate x:Key="EnemyTemplate" TargetType="{x:Type ContentControl}">
             <Grid>
-                <Ellipse Fill="#FFFB0017" Height="100" Stroke="Black" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Ellipse Fill="Gray" Height="100" Stroke="Black" Width="75" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Ellipse Fill="Black" HorizontalAlignment="Center" Height="35" Margin="40,20,70,0" Stroke="Black" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="10"/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse Fill="Black" HorizontalAlignment="Center" Height="35" Margin="70,20,40,0" Stroke="Black" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-10"/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
             </Grid>
         </ControlTemplate>
     </Window.Resources>
@@ -32,7 +52,7 @@
                     <GradientStop Color="#FFC5FF00" Offset="1"/>
                 </LinearGradientBrush>
             </Canvas.Background>
-            <StackPanel x:Name="human" Orientation="Vertical" MouseDown="human_MouseDown" MouseEnter="human_MouseEnter">
+            <StackPanel x:Name="human" Orientation="Vertical" MouseDown="human_MouseDown">
                 <Ellipse Fill="White" Height="10" Width="10"/>
                 <Rectangle Fill="White" Height="25" Width="10"/>
             </StackPanel>
@@ -44,7 +64,7 @@
                     </LinearGradientBrush>
                 </TextBlock.Foreground>
             </TextBlock>
-            <Rectangle x:Name="target" Height="50" Width="50" RenderTransformOrigin="0.5,0.5" Canvas.Left="895" Canvas.Top="260">
+            <Rectangle x:Name="target" Height="50" Width="50" RenderTransformOrigin="0.5,0.5" Canvas.Left="920" Canvas.Top="447"  MouseEnter="target_MouseEnter">
                 <Rectangle.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
